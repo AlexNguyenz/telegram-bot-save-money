@@ -10,7 +10,8 @@ if (!token) {
   process.exit(1);
 }
 
-const bot = new TelegramBot(token, { polling: true });
+const bot = new TelegramBot(token);
+bot.setWebHook("https://telegram-bot-save-money.vercel.app/api")
 
 // Thư mục lưu trữ file Excel của từng user
 const userDataDir = path.resolve(__dirname, '../users');
