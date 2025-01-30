@@ -14,7 +14,7 @@ const bot = new TelegramBot(token);
 bot.setWebHook("https://telegram-bot-save-money.vercel.app/api")
 
 // Thư mục lưu trữ file Excel của từng user
-const userDataDir = path.resolve(__dirname, '../users');
+const userDataDir = path.resolve("/tmp", '../users');
 if (!fs.existsSync(userDataDir)) {
   fs.mkdirSync(userDataDir); // Tạo thư mục nếu chưa tồn tại
 }
